@@ -5,6 +5,7 @@ version: '3'
 services:
   db:
     image: postgres
+    restart: always
     volumes:
       - ./tmp/db:/var/lib/postgresql/data
   web:
