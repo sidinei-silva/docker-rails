@@ -2,12 +2,12 @@
 
 FROM ruby:2.6
 RUN apt-get update -qq && apt-get install -y nodejs postgresql-client
-RUN mkdir /myapp
-WORKDIR /myapp
-COPY Gemfile /myapp/Gemfile
-COPY Gemfile.lock /myapp/Gemfile.lock
+RUN mkdir /docker-rails
+WORKDIR /docker-rails
+COPY Gemfile /docker-rails/Gemfile
+COPY Gemfile.lock /docker-rails/Gemfile.lock
 RUN bundle install
-COPY . /myapp
+COPY . /docker-rails
 
 # Add a script to be executed every time the container starts.
 COPY entrypoint.sh /usr/bin/
