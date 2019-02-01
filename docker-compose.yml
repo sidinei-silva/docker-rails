@@ -1,6 +1,5 @@
 # Este arquivo descreve os serviços que compõem seu aplicativo (um banco de dados e um aplicativo da Web), como obter a imagem do Docker de cada um (o banco de dados é executado apenas em uma imagem do PostgreSQL e o aplicativo da Web é criado a partir do diretório atual) e a configuração necessária para vinculá-los e expor a porta do aplicativo da web.
 
-
 version: '3'
 services:
   db:
